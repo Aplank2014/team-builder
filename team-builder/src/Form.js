@@ -15,8 +15,8 @@ const Form=(props=>{
         setTeamMember(defaultState);
       }
     return(
-    <form>
-        <label htmlFor="nameInput"> Name</label>
+    <form onSubmit={handleSubmit}>
+        <label htmlFor="nameInput"> Full Name</label>
             <input 
                 type='text' 
                 placeHolder='Enter Full Name' 
@@ -26,8 +26,7 @@ const Form=(props=>{
                 onChange={handleChange}>
             </input>
         <br></br>
-        <label>
-            Email 
+        <label htmlFor= "emailInput">Email</label> 
             <input 
                 type='email' 
                 placeHolder='Enter Email' 
@@ -36,12 +35,13 @@ const Form=(props=>{
                 value={teamMember.email} 
                 onChange={handleChange}>
             </input>
-        </label><br></br>
+        <br></br>
         <label htmlFor='team role'>
             Role </label>
             <input type="text" 
              placeHolder='Enter Team Role' 
                 id='team role' 
+                value={teamMember.role}
                 name='role' 
                 onChange={handleChange}>
                     </input>
@@ -52,6 +52,7 @@ const Form=(props=>{
              placeHolder='Enter Your Github Handle' 
                 id='githubHandle' 
                 name='githubHandle' 
+                value={teamMember.githubHandle}
                 onChange={handleChange}>
                     </input>
        <br></br>
