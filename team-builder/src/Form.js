@@ -16,8 +16,7 @@ const Form=(props=>{
       }
     return(
     <form>
-        <label>
-            Name 
+        <label htmlFor="nameInput"> Name</label>
             <input 
                 type='text' 
                 placeHolder='Enter Full Name' 
@@ -26,11 +25,11 @@ const Form=(props=>{
                 value={teamMember.name} 
                 onChange={handleChange}>
             </input>
-        </label><br></br>
+        <br></br>
         <label>
             Email 
             <input 
-                type='text' 
+                type='email' 
                 placeHolder='Enter Email' 
                 name='email' 
                 id='emailInput' 
@@ -56,7 +55,7 @@ const Form=(props=>{
                 onChange={handleChange}>
                     </input>
        <br></br>
-        <button type='submit' >Add Team Member</button>
+        <button type='submit'>Add Team Member</button>
     </form>
     )
 })
